@@ -9,7 +9,7 @@ import java.util.*;
 
 public class OctalOperations {
     
-    public int[] octalToBinary(int octal){
+    public String octalToBinary(int octal){
     
         String octalString=Integer.toString(octal);// convert octal number into a String type
         
@@ -55,7 +55,17 @@ public class OctalOperations {
             c++;
             }                
           }     
-    return binaryArray;   
+    StringBuilder resultString = new StringBuilder();
+
+        for (int i : binaryArray) {
+            // Append each integer to the result string
+            resultString.append(String.format("%01d", i));
+        }
+     
+    String result = resultString.toString();
+    System.out.println("result int is "+ result);
+    
+    return result;   
     }
     
     
@@ -143,16 +153,11 @@ public class OctalOperations {
     public static void main(String arg[])
     {
     OctalOperations newobj = new OctalOperations();
-    int[] array=newobj.octalToBinary(456);
-    int len=array.length;
+     String array=newobj.octalToBinary(456);
+    int len=array.length();
     System.out.println("Lenght is "+len);
-    for(int i=0;i<len;i++)
-    {
-        System.out.print(array[i]);
-    }
-   
+    System.out.print(array);
     System.out.println("Finished");
-    
     
     
     newobj.octalToDecimal(58);

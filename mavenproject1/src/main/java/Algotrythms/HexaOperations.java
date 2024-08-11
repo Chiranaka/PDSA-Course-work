@@ -13,7 +13,7 @@ import java.util.Arrays;
  */
 public class HexaOperations {
     
-     public int[] hexaToBinary(String hexa){
+     public String hexaToBinary(String hexa){
     
         String hexaString=hexa;// convert octal number into a String type
         
@@ -85,7 +85,7 @@ public class HexaOperations {
     String result = resultString.toString();
     System.out.println("result int is "+ result);
     
-    return binaryArray; 
+    return result; 
    
     }
      
@@ -137,27 +137,25 @@ public class HexaOperations {
 //         decimalStack.push(decimalDigit);
 //         System.out.println(decimalDigit);
         }
-        
-        
-        System.out.println(finalDecimal);
-        
+        System.out.println(finalDecimal);       
         return finalDecimal;
     }
      
      
      
+      
+      
+      
+      
+      
      
      
      public static void main(String[] args){
      
      HexaOperations newhex = new HexaOperations();
-     int[] array = newhex.hexaToBinary("2B77A");
+     String array = newhex.hexaToBinary("2B77A");
      
-     int len = array.length;
-     for(int i=0;i<len;i++)
-     {
-         System.out.print(array[i]);
-     }
+    System.out.println(array);
     
      System.out.println("Next method");
      newhex.hexaToDecimal("2A");

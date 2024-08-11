@@ -6,6 +6,7 @@
 package Algotrythms;
 
 import java.util.Arrays;
+import java.util.Stack;
 
 /**
  *
@@ -90,7 +91,7 @@ public class HexaOperations {
     }
      
      
-      public int hexaToDecimal(String hexa)
+     public int hexaToDecimal(String hexa)
     {
         String number = String.valueOf(hexa); // convert input number into a string
         int numlength= number.length();
@@ -142,7 +143,41 @@ public class HexaOperations {
     }
      
      
+     public String hexaToOctal(String hexa)
+     {
+         HexaOperations newhex =new HexaOperations();
+         int number=newhex.hexaToDecimal(hexa);
+         String numberString = Integer.toString(number);
+         
+        int decimalvalue=number;
+         
+         Stack<Integer> hexStack = new Stack<>();
+     int octmod=0; //  to keep mod value of the digit vise
      
+     
+     while(decimalvalue!=0)
+     {
+         System.out.println(decimalvalue);
+         octmod=decimalvalue%8; // get the mod of digital digitvalue
+            
+
+         System.out.println("mod is"+octmod);
+         hexStack.push(octmod);    
+         decimalvalue=decimalvalue/8;    
+     }
+     
+       int stackSize = hexStack.size();
+      StringBuilder resultString = new StringBuilder();
+
+        for (int i=0; i<stackSize;i++) {
+            // Append each integer to the result string
+            resultString.append(String.format("%01d", hexStack.pop()));
+        }
+     
+    String result = resultString.toString();
+    System.out.println("octal value is="+result);
+     return result;
+     }
       
       
       
@@ -159,6 +194,9 @@ public class HexaOperations {
     
      System.out.println("Next method");
      newhex.hexaToDecimal("2A");
+     
+      System.out.println("Next method");
+      newhex.hexaToOctal("2BA3");
      
      }
     

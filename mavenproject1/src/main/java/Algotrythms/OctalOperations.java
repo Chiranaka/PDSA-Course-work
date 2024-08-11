@@ -63,7 +63,7 @@ public class OctalOperations {
         }
      
     String result = resultString.toString();
-    System.out.println("result int is "+ result);
+    System.out.println("Binary Value is = "+ result);
     
     return result;   
     }
@@ -93,15 +93,13 @@ public class OctalOperations {
 //         decimalStack.push(decimalDigit);
 //         System.out.println(decimalDigit);
         }
-        
-        
-        //System.out.println(finalDecimal);
-        
+               
+        System.out.println("Decimal Value is "+finalDecimal);
         return finalDecimal;
     }
     
 
-    public void octalToHexadeciaml(int octal)
+    public String octalToHexadeciaml(int octal)
     {
         OctalOperations newmethod= new OctalOperations();
      int decimalvalue = newmethod.octalToDecimal(octal); // convert octal into a decimal value
@@ -138,11 +136,17 @@ public class OctalOperations {
          
      }
      
-   int length= hexStack.size();
-   for(int i=0; i<length;i++)
-   {
-       System.out.print(hexStack.pop());
-   }
+   int stackSize= hexStack.size();
+   StringBuilder resultString = new StringBuilder();
+
+        for (int i=0; i<stackSize;i++) {
+            // Append each integer to the result string
+            resultString.append(String.format("%01d", hexStack.pop()));
+        }
+     
+    String result = resultString.toString();
+    System.out.println("octal value is="+result);
+    return result;
      
     }
        

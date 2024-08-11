@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
  
 
-public class PDSA {
+public class DecimalOperations {
      public static void main(String[] args) {
         
         System.out.println("What is the decimal number :"); 
@@ -12,7 +12,7 @@ public class PDSA {
         int decimalNo =sc.nextInt();
         
         // call the decimalToBinary
-        int[] binaryArr = binaryToDecimal(decimalNo);
+        int[] binaryArr = decimalToBinary(decimalNo);
         System.out.print("Binary representation: ");
         for (int bit : binaryArr) {
             System.out.print(bit);
@@ -41,7 +41,7 @@ public class PDSA {
       
     }
      
-     public static int[] binaryToDecimal(int decimalNo ){
+     public static int[] decimalToBinary(int decimalNo ){
        Queue<Integer> queue = new LinkedList<>();
 
     while (decimalNo >0){
@@ -80,10 +80,15 @@ public class PDSA {
          
          return octalArr;
      }
-     
-        
+    
         //////////////////////
-       public static int[] decimalTohexaDecimal(int decimalNo ){
+
+    /**
+     *
+     * @param decimalNo
+     * @return
+     */
+       public static int[] decimalToHexaDecimal(int decimalNo ){
        Queue<Integer> queue = new LinkedList<>();
 
     while (decimalNo >0){

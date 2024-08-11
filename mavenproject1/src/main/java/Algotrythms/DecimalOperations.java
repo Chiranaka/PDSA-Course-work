@@ -1,7 +1,7 @@
 package Algotrythms;
-import java.util.*;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Scanner;
  
 
 public class DecimalOperations {
@@ -81,13 +81,9 @@ public class DecimalOperations {
          return octalArr;
      }
     
-        //////////////////////
+       
 
-    /**
-     *
-     * @param decimalNo
-     * @return
-     */
+     
        public static int[] decimalToHexaDecimal(int decimalNo ){
        Queue<Integer> queue = new LinkedList<>();
 

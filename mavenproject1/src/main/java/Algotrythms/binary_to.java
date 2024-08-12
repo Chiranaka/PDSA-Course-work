@@ -97,7 +97,7 @@ public class binary_to {
         // Conver Binary To HexaDecimal
          public static String binaryToHexaDecimal (int[] binaryArr ){
          Stack<Integer> Stack = new Stack<>();  
-         Queue<Integer> queue = new LinkedList<>();
+         Queue<String> queue = new LinkedList<>();
         
           
        // Process the binary digits in group of three
@@ -117,7 +117,9 @@ public class binary_to {
 
         // Pop from stack and enqueue into queue
         while (!Stack.isEmpty()) {
-            queue.add(Stack.pop());
+             int value = Stack.pop();
+             String hexdigit = convertToHexaDigit(value);
+             queue.add(hexdigit);
             
         }
 
@@ -129,5 +131,34 @@ public class binary_to {
 
         return hexaDecimal;
                 }
+
+        private static String convertToHexaDigit(int value){
+            String hexdigit;
+            switch(value){
+                case 10:
+                    hexdigit ="A";
+                    break;
+                case 11:
+                    hexdigit ="B";
+                    break;
+                case 12:
+                    hexdigit ="C";
+                    break;
+                case 13:
+                    hexdigit ="D";
+                    break;
+                case 14:
+                    hexdigit ="E";
+                    break;
+                case 15:
+                    hexdigit ="F";
+                    break;
+                default:
+                    hexdigit = String.valueof(value);
+                    break;
+            }
+
+            return hexdigit;
+        }
      
 }

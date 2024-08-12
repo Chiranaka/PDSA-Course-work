@@ -30,7 +30,7 @@ public class ExecutingClass {
         
         if(selectingNumber==1)
         {
-         System.out.println("Enter the Number you Wnat to Convert");
+         System.out.println("Enter the Binary  Number you Wnat to Convert");
          number=scn.nextInt();
          
          binary_to newBinary = new binary_to();
@@ -42,16 +42,16 @@ public class ExecutingClass {
                     binaryArr[i] = Character.getNumericValue(Integer.toString(number).charAt(i));
                 }
 
-                 newBinary.binaryToDecimal1(binaryArr);
-                 newBinary.binaryToOctal(binaryArr);
-                 newBinary.binaryToHexaDecimal(binaryArr);
+                 binary_to.binaryToDecimal1(binaryArr);
+                 binary_to.binaryToOctal(binaryArr);
+                 binary_to.binaryToHexaDecimal(binaryArr);
               
         }
         
         // Converting Octal to other bases
         else if(selectingNumber==2)
         {
-         System.out.println("Enter the Number you Wnat to Convert");
+         System.out.println("Enter the Octal Number you Wnat to Convert");
          number=scn.nextInt(); 
          
          OctalOperations newOctal = new OctalOperations();
@@ -64,20 +64,20 @@ public class ExecutingClass {
         // Converting Decimal to other bases
          else if(selectingNumber==3)
         {
-         System.out.println("Enter the Number you Wnat to Convert");
+         System.out.println("Enter the Decimal Number you Wnat to Convert");
          number=scn.nextInt(); 
          
          DecimalOperations newDecimal = new DecimalOperations();
          
-         newDecimal.decimalToBinary(number);
-         newDecimal.decimalToOctal(number);
-         newDecimal.decimalToHexaDecimal(number);       
+         DecimalOperations.decimalToBinary(number);
+         DecimalOperations.decimalToOctal(number);
+         DecimalOperations.decimalToHexaDecimal(number);       
         }
         
         //converting Hexadecimal to other bases
         else if(selectingNumber==4)
         {
-         System.out.println("Enter the Number you Wnat to Convert");
+         System.out.println("Enter the HexDecimal Number you Wnat to Convert");
          s_number=scn.nextLine(); 
         
          HexaOperations newHexa = new HexaOperations();

@@ -154,7 +154,7 @@ public class binary_to {
                     hexdigit ="F";
                     break;
                 default:
-                    hexdigit = String.valueof(value);
+                    hexdigit = String.valueOf(value);
                     break;
             }
 

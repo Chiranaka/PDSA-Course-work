@@ -62,6 +62,7 @@ public class DecimalOperations {
         for (int bit : binaryArr) {
             System.out.print(bit);
         }
+        System.out.println();
          return binaryArr;
      }
      

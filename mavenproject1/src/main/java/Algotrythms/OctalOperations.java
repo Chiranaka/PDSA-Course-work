@@ -103,7 +103,7 @@ public class OctalOperations {
     {
         OctalOperations newmethod= new OctalOperations();
      int decimalvalue = newmethod.octalToDecimal(octal); // convert octal into a decimal value
-       System.out.println("decimal value is"+decimalvalue);
+       //System.out.println("decimal value is"+decimalvalue);
      
      
      Stack<Character> hexStack = new Stack<>();
@@ -112,7 +112,7 @@ public class OctalOperations {
      
      while(decimalvalue!=0)
      {
-         System.out.println(decimalvalue);
+         //System.out.println(decimalvalue);
          hexmod=decimalvalue%16; // get the mod of digital digitvalue
             
          switch(hexmod){
@@ -130,7 +130,7 @@ public class OctalOperations {
              break;
              default: hexDigit=Character.forDigit(hexmod,10);
          }
-         System.out.println("mod is"+hexDigit);
+         //System.out.println("mod is"+hexDigit);
          hexStack.push(hexDigit);    
          decimalvalue=decimalvalue/16;
          
@@ -141,11 +141,11 @@ public class OctalOperations {
 
         for (int i=0; i<stackSize;i++) {
             // Append each integer to the result string
-            resultString.append(String.format("%01d", hexStack.pop()));
+            resultString.append(hexStack.pop());
         }
      
     String result = resultString.toString();
-    System.out.println("octal value is="+result);
+    System.out.println("HexaDecimal value is = "+result);
     return result;
      
     }

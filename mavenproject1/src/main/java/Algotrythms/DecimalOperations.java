@@ -29,7 +29,7 @@ public class DecimalOperations {
           System.out.println();
          
         // call the decimalToOctal
-       int[] hexaDecimalArr = decimalTohexaDecimal(decimalNo);
+       int[] hexaDecimalArr = decimalToHexaDecimal(decimalNo);
         System.out.print("HexaDecimal representation: ");
         for (int bit : hexaDecimalArr) {
             System.out.print(bit);
@@ -48,6 +48,7 @@ public class DecimalOperations {
         int rem = decimalNo % 2;
         queue.add(rem);
         decimalNo = decimalNo/2;
+        
     }   
  // create an array to hold the binary digits
          int[] binaryArr = new int[queue.size()];
@@ -57,7 +58,10 @@ public class DecimalOperations {
          while(!queue.isEmpty()){
              binaryArr[index--] = queue.poll();
          }
-         
+         System.out.print("Binary value is = : ");
+        for (int bit : binaryArr) {
+            System.out.print(bit);
+        }
          return binaryArr;
      }
      
@@ -77,7 +81,12 @@ public class DecimalOperations {
          while(!queue.isEmpty()){
              octalArr[index--] = queue.poll();
          }
-         
+          System.out.print("Octal value is = : ");
+        for (int bit : octalArr) {
+            System.out.print(bit);
+        }
+        // call the decimatoHexaDecimal
+          System.out.println();
          return octalArr;
      }
     
@@ -104,7 +113,10 @@ public class DecimalOperations {
          while(!queue.isEmpty()){
              hexaDecimalArr[index--] = queue.poll();
          }
-         
+         System.out.print("HexaDecimal value is = : ");
+        for (int bit : hexaDecimalArr) {
+            System.out.print(bit);
+        }
          return hexaDecimalArr;
      }}
       

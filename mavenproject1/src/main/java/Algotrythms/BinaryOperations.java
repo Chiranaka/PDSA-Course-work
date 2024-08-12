@@ -5,7 +5,7 @@ import java.util.Scanner;
 import java.util.Stack;
 
  
-public class binary_to {
+public class BinaryOperations {
         public static void main(String[] args) {
         System.out.println("What is the Binary Number");
         Scanner sc = new Scanner(System.in);

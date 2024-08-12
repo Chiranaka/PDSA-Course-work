@@ -33,7 +33,7 @@ public class ExecutingClass {
          System.out.println("Enter the Binary  Number you Wnat to Convert");
          number=scn.nextInt();
          
-         binary_to newBinary = new binary_to();
+         BinaryOperations newBinary = new BinaryOperations();
          // declare array 
         int[] binaryArr = new int[Integer.toString(number).length()];
                
@@ -41,10 +41,12 @@ public class ExecutingClass {
                 for (int i = 0; i < Integer.toString(number).length(); i++) {
                     binaryArr[i] = Character.getNumericValue(Integer.toString(number).charAt(i));
                 }
-
-                 binary_to.binaryToDecimal1(binaryArr);
-                 binary_to.binaryToOctal(binaryArr);
-                 binary_to.binaryToHexaDecimal(binaryArr);
+                
+                System.out.println("Decimal Value is = "+BinaryOperations.binaryToDecimal1(binaryArr));
+                System.out.println( "Octal Value is  = "+BinaryOperations.binaryToOctal(binaryArr));
+                System.out.println("HexaDecimal Value is = "+BinaryOperations.binaryToHexaDecimal(binaryArr));
+                
+                 
               
         }
         

@@ -29,7 +29,7 @@ public class DecimalOperations {
           System.out.println();
          
         // call the decimalToOctal
-       int[] hexaDecimalArr = decimalToHexaDecimal(decimalNo);
+       char[] hexaDecimalArr = decimalToHexaDecimal(decimalNo);
         System.out.print("HexaDecimal representation: ");
         for (int bit : hexaDecimalArr) {
             System.out.print(bit);
@@ -94,16 +94,33 @@ public class DecimalOperations {
        
 
      
-       public static int[] decimalToHexaDecimal(int decimalNo ){
-       Queue<Integer> queue = new LinkedList<>();
+       public static char[] decimalToHexaDecimal(int decimalNo ){
+       Queue<Character> queue = new LinkedList<>();
 
     while (decimalNo >0){
     int rem = decimalNo % 16;
-    queue.add(rem);
+    char hexDigit;// to keep the converted digit
+    
+             switch(rem){
+             case 10: hexDigit='A';
+             break;
+             case 11: hexDigit='B';
+             break;
+             case 12: hexDigit='C';
+             break;
+             case 13: hexDigit='D';
+             break;
+             case 14: hexDigit='E';
+             break;
+             case 15: hexDigit='F';
+             break;
+             default: hexDigit=Character.forDigit(rem,10);
+         }
+    queue.add(hexDigit);
     decimalNo = decimalNo/16;
     }   
  // create an array to hold the binary digits
-         int[] hexaDecimalArr = new int[queue.size()];
+         char[] hexaDecimalArr = new char[queue.size()];
          int index = queue.size()-1;
          
          //dequeue and store in the array (in reverse order)
@@ -111,7 +128,7 @@ public class DecimalOperations {
              hexaDecimalArr[index--] = queue.poll();
          }
          System.out.print("HexaDecimal value is = : ");
-        for (int bit : hexaDecimalArr) {
+        for (char bit : hexaDecimalArr) {
             System.out.print(bit);
         }
          return hexaDecimalArr;

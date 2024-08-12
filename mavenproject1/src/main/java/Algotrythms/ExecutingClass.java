@@ -89,7 +89,9 @@ public class ExecutingClass {
          newHexa.hexaToOctal(s_number);
         
         }
-        
+            
+        System.out.println("");
+        System.out.println("");
         System.out.println("do you want to Convert another Number (Press Any Key to Continue....)");
         reply=scn.nextLine();
         }

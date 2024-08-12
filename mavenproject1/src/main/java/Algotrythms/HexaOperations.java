@@ -20,14 +20,14 @@ public class HexaOperations {
         
         int[] binaryArray=new int[hexaString.length()*4]; // define an array to store binarydigit. lenth is 3x octal
         
-        System.out.println("length of the octal array is = "+binaryArray.length);
+        //System.out.println("length of the octal array is = "+binaryArray.length);
         int binaryCount=0; //this is for assign indexes for octalArray
         
         int c=0;// this is for get the indexes of binary digit string
         for(int i=0;i<hexaString.length();i++)
         {
             char digitValue=hexaString.charAt(i);
-            System.out.println(digitValue);
+            //System.out.println(digitValue);
             String binaryDigit;
             
             switch (digitValue) {
@@ -65,14 +65,14 @@ public class HexaOperations {
             break;
             default: throw new IllegalArgumentException("Invalid octal digit: " + digitValue);
             }
-             System.out.println(binaryDigit); // To confirm binary digit has been converted correctly
+             //System.out.println(binaryDigit); // To confirm binary digit has been converted correctly
             
             /// assignin those binarydigit strings to array.'0010' take as 0 0 1 0
             
             for(int j=0;j<4;j++)
             {
             binaryArray[c]= Integer.parseInt(Character.toString(binaryDigit.charAt(j)));
-             System.out.println(binaryArray[c]);
+             //System.out.println(binaryArray[c]);
             c++;
             }                
           } 
@@ -84,7 +84,7 @@ public class HexaOperations {
         }
      
     String result = resultString.toString();
-    System.out.println("result int is "+ result);
+    System.out.println("Binary Value is "+ result);
     
     return result; 
    
@@ -127,9 +127,9 @@ public class HexaOperations {
          
           decimalDigit=(int)(hexadigit* Math.pow(16, i));
          
-         System.out.println("index "+hexaDigitIndex);
-         System.out.println("power of 16 is "+i);
-         System.out.println(hexdigit);
+         //System.out.println("index "+hexaDigitIndex);
+         //System.out.println("power of 16 is "+i);
+         //System.out.println(hexdigit);
          decimalDigit=(int) (Character.getNumericValue(hexdigit)* Math.pow(16, i));
          
          
@@ -138,7 +138,7 @@ public class HexaOperations {
 //         decimalStack.push(decimalDigit);
 //         System.out.println(decimalDigit);
         }
-        System.out.println(finalDecimal);       
+        System.out.println("Decimal Value is = "+finalDecimal);       
         return finalDecimal;
     }
      
@@ -157,11 +157,11 @@ public class HexaOperations {
      
      while(decimalvalue!=0)
      {
-         System.out.println(decimalvalue);
+         //System.out.println(decimalvalue);
          octmod=decimalvalue%8; // get the mod of digital digitvalue
             
 
-         System.out.println("mod is"+octmod);
+         //System.out.println("mod is"+octmod);
          hexStack.push(octmod);    
          decimalvalue=decimalvalue/8;    
      }
@@ -175,7 +175,7 @@ public class HexaOperations {
         }
      
     String result = resultString.toString();
-    System.out.println("octal value is="+result);
+    System.out.println("Octal value is="+result);
      return result;
      }
       
@@ -190,7 +190,6 @@ public class HexaOperations {
      HexaOperations newhex = new HexaOperations();
      String array = newhex.hexaToBinary("2B77A");
      
-    System.out.println(array);
     
      System.out.println("Next method");
      newhex.hexaToDecimal("2A");

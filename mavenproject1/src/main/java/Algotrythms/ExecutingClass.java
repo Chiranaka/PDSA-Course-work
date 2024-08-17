@@ -20,7 +20,7 @@ public class ExecutingClass {
         int selectingNumber;// to get the selecting input number
         Scanner scn=new Scanner(System.in);
         
-        String reply="yes";
+        String reply;
         do{
         System.out.println("What is the Base of the Number you want to Convert (1.Binary 2.Octal 3.Decimal 4.Hexadecimal)");
         System.out.println("Enter the relevent number");
@@ -45,9 +45,7 @@ public class ExecutingClass {
                 System.out.println("Decimal Value is = "+BinaryOperations.binaryToDecimal1(binaryArr));
                 System.out.println( "Octal Value is  = "+BinaryOperations.binaryToOctal(binaryArr));
                 System.out.println("HexaDecimal Value is = "+BinaryOperations.binaryToHexaDecimal(binaryArr));
-                
-                 
-              
+                     
         }
         
         // Converting Octal to other bases
@@ -80,7 +78,7 @@ public class ExecutingClass {
         else if(selectingNumber==4)
         {
          System.out.println("Enter the HexDecimal Number you Wnat to Convert");
-         s_number=scn.nextLine(); 
+         s_number = scn.next(); 
         
          HexaOperations newHexa = new HexaOperations();
          
@@ -92,10 +90,10 @@ public class ExecutingClass {
             
         System.out.println("");
         System.out.println("");
-        System.out.println("do you want to Convert another Number (Press Any Key to Continue....)");
-        reply=scn.nextLine();
-        }
-        while(reply!="n"|| reply!="N");
+        System.out.println("do you want to Convert another Number??? (Press Any Key to Continue....) (Press 'n' to Finish)");
+        
+        reply= scn.next();
+        } while(!"n".equals(reply));
     }
     
 }

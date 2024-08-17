@@ -74,7 +74,7 @@ public class BinaryOperations {
             groupValue += binaryArr[i] * Math.pow(2, power);
             power++;
             
-            if (power == 3 || i == 0) {
+            if (power == 2 || i == 0) {
                 Stack.push((groupValue));
                 groupValue = 0;
                 power = 0;
@@ -108,7 +108,7 @@ public class BinaryOperations {
             power++;
             
             
-            if (power == 4 || i == 0) {
+            if (power == 3 || i == 0) {
                 Stack.push((groupValue));
                 groupValue = 0;
                 power = 0;

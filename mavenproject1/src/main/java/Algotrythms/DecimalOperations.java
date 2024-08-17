@@ -91,8 +91,6 @@ public class DecimalOperations {
          return octalArr;
      }
     
-       
-
      
        public static char[] decimalToHexaDecimal(int decimalNo ){
        Queue<Character> queue = new LinkedList<>();
